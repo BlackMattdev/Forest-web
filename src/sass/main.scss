@@ -1,0 +1,109 @@
+@use 'utilities' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+// NAVIGATION
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $white;
+	&__nav {
+		display: flex;
+		white-space: nowrap;
+		height: 80px;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		display: inline-block;
+		padding-left: 2%;
+		font-size: 3rem;
+		a {
+			color: $black;
+		}
+		i {
+			color: $gray;
+		}
+	}
+	&__desktop {
+		&-list {
+			display: none;
+
+			font-size: 1.5rem;
+		}
+		&-item {
+			display: inline-block;
+
+			padding: 2.2em; // do zmiany
+			list-style: none;
+			transition: background-color 0.3s;
+			cursor: pointer;
+			a {
+				//problem z hoverem do rozwiązania
+				padding: 1.42em 0;
+				color: $black;
+				transition: color 0.3s;
+				&:hover {
+					color: $white;
+				}
+			}
+			&:hover {
+				background-color: $black;
+			}
+		}
+	}
+}
+
+// HEADER
+.header {
+	position: relative;
+	margin-top: 80px;
+	max-height: 400px;
+	background-image: url('../img/jungleSmall.jpg');
+	background-position: center;
+	background-size: cover;
+	z-index: -10;
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 15%;
+		padding: 1em;
+		height: 60vh;
+		max-height: 400px;
+		color: $white;
+		h1 {
+			font-size: 4rem;
+		}
+		p {
+			font-size: 2.5rem;
+		}
+	}
+}
+
+@import './utilities/media';

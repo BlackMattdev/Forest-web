@@ -1,0 +1,14 @@
+// 992 px
+@media (min-width: 992px) {
+	.navbar {
+		&__desktop {
+			&-list {
+				display: flex;
+			}
+		}
+	}
+
+	.header {
+		background-image: url('../img/jungleBig.jpg');
+	}
+}
