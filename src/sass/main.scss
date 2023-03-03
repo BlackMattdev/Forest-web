@@ -25,6 +25,7 @@ a {
 	top: 0;
 	width: 100%;
 	background-color: $white;
+	z-index: 1000;
 	&__nav {
 		display: flex;
 		white-space: nowrap;
@@ -43,6 +44,20 @@ a {
 			color: $gray;
 		}
 	}
+	// &__mobile {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// 	flex-direction: column;
+	// 	&-item {
+	// 		list-style: none;
+	// 	}
+	// }
 	&__desktop {
 		&-list {
 			display: none;
@@ -92,18 +107,55 @@ a {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin-left: 15%;
+		// margin-left: 20%;
 		padding: 1em;
 		height: 60vh;
 		max-height: 400px;
 		color: $white;
 		h1 {
-			font-size: 4rem;
+			font-size: 2.7rem;
 		}
 		p {
-			font-size: 2.5rem;
+			font-size: 1.9rem;
 		}
 	}
 }
+
+//ABOUTUS
+
+.aboutus {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		&-img{
+			margin: 0 auto;
+			width: 80%;
+			max-width: 600px;
+		}
+		&-text {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			max-width: 600px;
+			// margin-left: 4em;
+			width: 80%;
+			overflow: hidden;
+			h3 {
+				margin-top: 1em;
+				font-size: 2em;
+			}
+			p {
+				margin-top: 1em;
+				font-size: 1.5em;
+				line-height: 200%;
+			}
+		}
+	}
+}
+
+
+
+
+
 
 @import './utilities/media';
