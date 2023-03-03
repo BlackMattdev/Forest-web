@@ -11,7 +11,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	font-family: sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -35,7 +35,7 @@ a {
 	}
 	&__logo {
 		display: inline-block;
-		padding-left: 2%;
+		padding-left: 50px;
 		font-size: 3rem;
 		a {
 			color: $black;
@@ -107,8 +107,7 @@ a {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		// margin-left: 20%;
-		padding: 1em;
+		padding-left: 50px;
 		height: 60vh;
 		max-height: 400px;
 		color: $white;
@@ -179,6 +178,73 @@ a {
 		p {
 			padding: 1em 4em;
 			border: 2px solid;
+		}
+	}
+}
+
+//OFFER
+.offer {
+	&__description {
+		padding-bottom: 1em;
+		font-size: 2rem;
+		text-align: center;
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 20px auto;
+		width: 80%;
+		border-radius: 8px;
+		box-shadow: 0 0 10px #999999;
+		&-title {
+			margin-top: 1em;
+			font-size: 2.5em;
+			font-weight: 400;
+		}
+		&-price {
+			padding: 0.5em;
+			font-size: 3.5em;
+			font-weight: bold;
+		}
+		&-info {
+			&-list {
+				font-size: 2rem;
+				list-style: none;
+				line-height: 150%;
+				.fa-check {
+					color: rgb(0, 209, 0);
+				}
+			}
+			&-item {
+				&-out {
+					color: $gray;
+				}
+			}
+		}
+		&-btn {
+			margin: 1em auto 2em;
+			padding: 0.2em 1.5em;
+			font-size: 2rem;
+			background-color: $white;
+			border: none;
+			border-radius: 8px;
+			box-shadow: 0 0 10px #999999;
+			transition: background-color 0.3s, box-shadow 0.3s;
+			cursor: pointer;
+			&:hover {
+				background-color: #999999;
+				box-shadow: 0 0 20px #999999;
+			}
+			&-best {
+				background-color: #65bd69;
+				box-shadow: 0 0 10px #7eee84;
+				&:hover {
+					background-color: #7eee84;
+					box-shadow: 0 0 20px #7eee84;
+				}
+			}
 		}
 	}
 }

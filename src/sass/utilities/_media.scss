@@ -1,4 +1,5 @@
 // @media (min-width: 375px) {
+
 // }
 
 @media (min-width: 576px) {
@@ -15,6 +16,11 @@
 			}
 		}
 	}
+	.offer {
+		&__card{
+			width: 50%;
+		}
+}
 }
 
 @media (min-width: 768px) {
@@ -51,6 +57,15 @@
 			font-size: 2.5rem;
 		}
 	}
+	.offer {
+		&__cards {
+			display: flex;
+			flex-direction: row;
+		}
+		&__card{
+			width: 30%;
+		}
+}
 }
 
 // 992 px
