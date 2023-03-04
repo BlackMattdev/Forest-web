@@ -17,10 +17,17 @@
 		}
 	}
 	.offer {
-		&__card{
+		&__card {
 			width: 50%;
 		}
-}
+	}
+	.footer {
+		&__boxes {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: normal;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -62,10 +69,19 @@
 			display: flex;
 			flex-direction: row;
 		}
-		&__card{
+		&__card {
 			width: 30%;
 		}
-}
+	}
+	.footer {
+		&__box {
+			&-info {
+				&-desktop {
+					display: block;
+				}
+			}
+		}
+	}
 }
 
 // 992 px
@@ -98,6 +114,14 @@
 		background-image: url('../img/girlBig.jpg');
 		&__text {
 			font-size: 3rem;
+		}
+	}
+	.footer {
+		&__box {
+			&-logo {
+				width: 45%;
+				flex-wrap: nowrap;
+			}
 		}
 	}
 }
