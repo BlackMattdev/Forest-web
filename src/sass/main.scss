@@ -249,6 +249,17 @@ a {
 			}
 		}
 	}
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		font-size: 2em;
+		a {
+			color: rgb(0, 167, 0);
+			&:hover {
+				color: rgb(0, 78, 0);
+			}
+		}
+	}
 }
 
 .footer {
@@ -291,5 +302,9 @@ a {
 		}
 	}
 }
+
+// ********
+// CONTACT
+// ********
 
 @import './utilities/media';
