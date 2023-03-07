@@ -28,6 +28,23 @@
 			align-items: normal;
 		}
 	}
+	.offersub {
+		&__items {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__item {
+			flex-direction: row;
+			padding: 0 20px;
+			width: 70%;
+			&-title {
+				width: 35%;
+			}
+			&-price {
+				width: 25%;
+			}
+		}
+	}
 	.contact {
 		&__map {
 			display: flex;
@@ -96,6 +113,18 @@
 			}
 		}
 	}
+	.offersub {
+
+		&__item {
+			&-title {
+				width: 25%;
+			}
+			&-price {
+				width: 15%;
+			}
+		}
+	}
+
 	.contact {
 		&__map {
 			iframe {
@@ -156,7 +185,7 @@
 		&__map {
 			iframe {
 				margin-top: 0;
-				padding-left: 20px;
+				margin-left: 20px;
 			}
 			&-text {
 				display: none;

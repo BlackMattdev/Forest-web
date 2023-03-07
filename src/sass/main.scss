@@ -304,6 +304,59 @@ a {
 }
 
 // ********
+// OFFER - PAGE
+// ********
+
+.offersub {
+	padding: 50px 0 0 50px;
+	&__items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 40%;
+		margin: 10px;
+		padding: 20px;
+		box-shadow: 0 0 10px #999999;
+		border-radius: 8px;
+		&-title {
+			font-size: 1.5em;
+		}
+		&-price {
+			font-size: 2em;
+		}
+		&-info {
+			&-list {
+				list-style: none;
+				padding: 10px 0;
+				&-option {
+					.fa-check {
+						color: rgb(0, 209, 0);
+					}
+				}
+			}
+		}
+		&-btn {
+			padding: 10px 20px;
+			font-size: 1.2em;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			&:hover {
+				background-color: $gray;
+			}
+		}
+	}
+}
+
+// ********
 // CONTACT
 // ********
 
@@ -350,6 +403,7 @@ a {
 			align-self: end;
 			padding: 10px 30px;
 			font-size: 1.5em;
+			font-family: 'Raleway', sans-serif;
 			border: none;
 			border-radius: 8px;
 			cursor: pointer;
@@ -365,6 +419,7 @@ a {
 			height: 450px;
 			border: 0;
 			border-radius: 8px;
+			overflow: hidden;
 		}
 		&-text {
 			padding: 20px;
