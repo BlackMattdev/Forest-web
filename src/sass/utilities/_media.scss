@@ -28,6 +28,16 @@
 			align-items: normal;
 		}
 	}
+	.contact {
+		&__map {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			iframe {
+				width: 350px;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -86,6 +96,13 @@
 			}
 		}
 	}
+	.contact {
+		&__map {
+			iframe {
+				width: 550px;
+			}
+		}
+	}
 }
 
 // 992 px
@@ -125,6 +142,24 @@
 			&-logo {
 				width: 45%;
 				flex-wrap: nowrap;
+			}
+		}
+	}
+	.contact {
+		height: 75vh;
+		&__items {
+			flex-direction: row;
+		}
+		&__form {
+			width: 50%;
+		}
+		&__map {
+			iframe {
+				margin-top: 0;
+				padding-left: 20px;
+			}
+			&-text {
+				display: none;
 			}
 		}
 	}
