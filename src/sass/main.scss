@@ -20,13 +20,49 @@ a {
 }
 
 // NAVIGATION
+.navbarmob {
+	position: fixed;
+	top: 80px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: translateX(102%);
+	transition: transform 0.5s;
+	z-index: 1000;
+	&__mobile {
+		&-list {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			font-size: 3em;
+			list-style: none;
+			line-height: 200%;
 
+			background-color: white;
+
+			// display: none;
+			&-item {
+				color: $black;
+				transition: transform 0.3s;
+				&:hover {
+					color: $green;
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+	&--active {
+		transform: translateX(0);
+	}
+}
 .navbar {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	background-color: $white;
-	z-index: 1000;
+	z-index: 100;
 	&__nav {
 		display: flex;
 		white-space: nowrap;
@@ -45,45 +81,29 @@ a {
 			color: $darkgray;
 		}
 	}
-	// &__mobile {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	align-items: center;
-	// 	flex-direction: column;
-	// 	&-item {
-	// 		list-style: none;
-	// 	}
-	// }
+
 	&__desktop {
 		&-list {
-			display: none;
-
+			display: flex;
+			list-style: none;
 			font-size: 1.5rem;
 		}
 		&-item {
-			display: inline-block;
-
-			padding: 2.2em; // do zmiany
-			list-style: none;
-			transition: background-color 0.3s;
+			display: none;
+			padding: 2.2em;
 			cursor: pointer;
-			a {
-				//problem z hoverem do rozwiązania
-				padding: 1.42em 0;
-				color: $black;
-				transition: color 0.3s;
-				&:hover {
-					color: $white;
-				}
-			}
+			color: $black;
+			transition: color 0.3s, background-color 0.3s;
 			&:hover {
+				color: $white;
 				background-color: $black;
 			}
+		}
+		&-hamburger {
+			padding: 1em;
+			font-size: 3rem;
+			color: $black;
+			cursor: pointer;
 		}
 	}
 }
@@ -308,7 +328,8 @@ a {
 // ********
 
 .offersub {
-	padding: 50px 0 0 50px;
+	padding: 50px 10px;
+	min-height: 75vh;
 	&__items {
 		display: flex;
 		flex-direction: row;
