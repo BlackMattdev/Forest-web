@@ -14,6 +14,8 @@ const handleNav = () => {
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
 			navbarmob.classList.remove('navbarmob--active');
+			bars.classList.toggle('fa-xmark');
+			bars.classList.toggle('fa-bars');
 		});
 	});
 };
