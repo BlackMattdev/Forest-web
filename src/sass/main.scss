@@ -78,7 +78,7 @@ a {
 		display: inline-block;
 		padding-left: 50px;
 		font-size: 3rem;
-		&-link{
+		&-link {
 			color: $black;
 		}
 		&-icon {
@@ -161,14 +161,13 @@ a {
 			flex-direction: column;
 			margin: 0 auto;
 			max-width: 600px;
-			// margin-left: 4em;
 			width: 80%;
 			overflow: hidden;
-			h3 {
+			&-title {
 				margin-top: 1em;
 				font-size: 2em;
 			}
-			p {
+			&-description {
 				margin-top: 1em;
 				font-size: 1.5em;
 				line-height: 200%;
@@ -200,7 +199,7 @@ a {
 		height: 25vh;
 		font-size: 1.7rem;
 		color: $white;
-		p {
+		&-description {
 			padding: 1em 4em;
 			border: 2px solid;
 		}
@@ -277,7 +276,7 @@ a {
 		display: flex;
 		justify-content: center;
 		font-size: 2em;
-		a {
+		&-link {
 			color: rgb(0, 167, 0);
 			&:hover {
 				color: rgb(0, 78, 0);
