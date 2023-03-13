@@ -1,11 +1,11 @@
 const hamburger = document.querySelector('.navbar__desktop-hamburger');
-const bars = document.querySelector('.navbar__desktop-hamburger i');
 const navbarmob = document.querySelector('.navbarmob');
 const allNavItems = document.querySelectorAll('.navbarmob__mobile-list-item');
 
 const footerYear = document.querySelector('.footer__year');
 
 const handleNav = () => {
+	const bars = document.querySelector('.navbar__desktop-hamburger i');
 	console.log(bars);
 	bars.classList.toggle('fa-bars');
 	bars.classList.toggle('fa-xmark');
@@ -13,9 +13,9 @@ const handleNav = () => {
 	document.body.classList.toggle('sticky-body');
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
+			bars.classList.add('fa-bars');
+			bars.classList.remove('fa-xmark');
 			navbarmob.classList.remove('navbarmob--active');
-			bars.classList.toggle('fa-xmark');
-			bars.classList.toggle('fa-bars');
 		});
 	});
 };
